@@ -6,6 +6,7 @@ php:
 
 
 before_script:
+  - npm install -g bower
   - cd sigenes
   - cp .env.example .env
   - composer self-update
