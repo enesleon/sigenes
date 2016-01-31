@@ -6,10 +6,12 @@ php:
 
 
 before_script:
+  - npm install -g bower
   - cd sigenes
   - cp .env.example .env
   - composer self-update
   - composer install --no-interaction
+  - bower install
 
 script:
   - vendor/bin/phpunit
