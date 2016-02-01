@@ -25,7 +25,7 @@ class CreateAddressTable extends Migration
             $table->integer('city_id')->unsigned();
             $table->integer('state_id')->unsigned();
             $table->integer('country_id')->unsigned();
-            $table->timestamps()->nullable();
+            $table->timestamps();
             $table->foreign('city_id')->references('id')
                 ->on('citys')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('state_id')->references('id')
@@ -42,6 +42,6 @@ class CreateAddressTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('address');
     }
 }

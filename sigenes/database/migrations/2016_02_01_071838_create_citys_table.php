@@ -16,10 +16,9 @@ class CreateCitysTable extends Migration
             $table->increments('id');
             $table->string('name', 30);
             $table->integer('state_id')->unsigned();
-            $table->timestamps()->nullable();
-            $table->foreign('state_id')->references('id')
-                ->on('states')->onDelete('cascade')->onUpdate('cascade');
+            $table->timestamps();
         });
+
     }
 
     /**
@@ -29,6 +28,6 @@ class CreateCitysTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('citys');
     }
 }

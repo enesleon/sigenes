@@ -16,12 +16,10 @@ class CreateStatesTable extends Migration
             $table->increments('id');
             $table->string('name', 30);
             $table->integer('country_id')->unsigned();
-            $table->timestamps()->nullable();
-            $table->foreign('country_id')
-                ->references('id')
-                ->on('countrys')
-                ->onDelete('cascade')->onUpdate('cascade');
+            $table->timestamps();
         });
+
+        
     }
 
     /**
@@ -31,6 +29,6 @@ class CreateStatesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('states');
     }
 }

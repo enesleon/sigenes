@@ -16,7 +16,7 @@ class CreateEmployeeTypesTable extends Migration
             $table->increments('id');
             $table->integer('employee_id')->unsigned();
             $table->integer('type_id')->unsigned();
-            $table->timestamps()->nullable();
+            $table->timestamps();
             $table->foreign('employee_id')->references('id')
                 ->on('employees')->onDelete('cascade')->onUpdte('cascade');
             $table->foreign('type_id')->references('id')
@@ -31,6 +31,6 @@ class CreateEmployeeTypesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('employee_types');
     }
 }

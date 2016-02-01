@@ -19,9 +19,9 @@ class CreateEmployeesTable extends Migration
             $table->integer('heigher_education');
             $table->integer('designation');
             $table->integer('certificate_id')->unsigned();
-            $table->timestamps()->nullable();
+            $table->timestamps();
             $table->foreign('parner_id')->references('id')
-                ->on('parner')->onDelete('cascade')->onUpdte('cascade');
+                ->on('parners')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
@@ -32,6 +32,6 @@ class CreateEmployeesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('employees');
     }
 }

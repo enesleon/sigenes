@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateParnersTable extends Migration
+class CreateAttachmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -26,11 +26,13 @@ class CreateParnersTable extends Migration
             $table->string('telephone', 25);
             $table->string('celphone', 25);
             $table->enum('maritalstatus', ['Casado', 'Soltero', 'Divorciado', 'Viudo']);
-            $table->timestamps()->nullable();
-            $table->integer('users_id')->unsigned();
-            $table->foreign('users_id')->references('id')
+            $table->timestamps();
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')
                 ->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
+
+        
     }
 
     /**
@@ -40,6 +42,6 @@ class CreateParnersTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('parners');
     }
 }
