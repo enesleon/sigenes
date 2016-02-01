@@ -4,6 +4,11 @@ php:
   - 5.6
   - 7.0
 
+services:
+  - mysql
+
+before_install:
+  - mysql -e "create database IF NOT EXISTS test;" -uroot
 
 before_script:
   - npm install -g bower
