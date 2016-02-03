@@ -9,7 +9,7 @@ services:
 
 before_install:
   - echo "USE mysql;\nUPDATE user SET password=PASSWORD('root') WHERE user='root';\nFLUSH PRIVILEGES;\n" | mysql -u root
-  - mysql -e "create database IF NOT EXISTS test;" -uroot -proot
+  - mysql -e "create database IF NOT EXISTS sigenes;" -uroot -proot
 
 before_script:
   - npm install -g bower
@@ -19,6 +19,8 @@ before_script:
   - composer install --no-interaction
   - bower install
   - php artisan migrate
+  - chmod 777 script.sh
+  - sh script.sh
 
 script:
   - vendor/bin/phpunit
