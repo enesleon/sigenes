@@ -16,10 +16,10 @@ class CreateStudentsTable extends Migration
             $table->increments('id');
             $table->string('account_number', 45);
             $table->dateTime('data_register');
-            $table->integer('parner_id')->unsigned();
+            $table->integer('partner_id')->unsigned();
             $table->timestamps();
-            $table->foreign('parner_id')->references('id')
-                ->on('parners')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('partner_id')->references('id')
+                ->on('partners')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
