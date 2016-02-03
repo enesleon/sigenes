@@ -17,6 +17,7 @@ class CreateAttachmentTypesTable extends Migration
             $table->string('name', 30);
             $table->enum('type', ['employee', 'candidate', 'student']);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

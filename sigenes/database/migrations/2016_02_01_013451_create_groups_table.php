@@ -18,6 +18,7 @@ class CreateGroupsTable extends Migration
             $table->string('name',30);
             $table->integer('acl_id')->unsigned();
             $table->timestamps();
+            $table->softDeletes();
             $table->foreign('acl_id')->references('id')
                 ->on('acls')->onDelete('cascade')->onUpdate('cascade');
         });

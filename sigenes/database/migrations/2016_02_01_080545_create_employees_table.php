@@ -20,6 +20,7 @@ class CreateEmployeesTable extends Migration
             $table->integer('designation');
             $table->integer('certificate_id')->unsigned();
             $table->timestamps();
+            $table->softDeletes();
             $table->foreign('partner_id')->references('id')
                 ->on('partners')->onDelete('cascade')->onUpdate('cascade');
         });
