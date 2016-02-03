@@ -26,6 +26,7 @@ class CreateAddressTable extends Migration
             $table->integer('state_id')->unsigned();
             $table->integer('country_id')->unsigned();
             $table->timestamps();
+            $table->softDeletes();
             $table->foreign('city_id')->references('id')
                 ->on('citys')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('state_id')->references('id')

@@ -27,6 +27,7 @@ class CreatePartnersTable extends Migration
             $table->string('celphone', 25);
             $table->enum('maritalstatus', ['Casado', 'Soltero', 'Divorciado', 'Viudo']);
             $table->timestamps();
+            $table->softDeletes();
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')
                 ->on('users')->onDelete('cascade')->onUpdate('cascade');

@@ -19,6 +19,7 @@ class CreateAclsTable extends Migration
             $table->boolean('perm_update');
             $table->boolean('perm_delete');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

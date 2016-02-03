@@ -17,6 +17,7 @@ class CreateEmployeeTypesTable extends Migration
             $table->integer('employee_id')->unsigned();
             $table->integer('type_id')->unsigned();
             $table->timestamps();
+            $table->softDeletes();
             $table->foreign('employee_id')->references('id')
                 ->on('employees')->onDelete('cascade')->onUpdte('cascade');
             $table->foreign('type_id')->references('id')

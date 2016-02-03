@@ -5,13 +5,12 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Acl extends Model
+class Type extends Model
 {
     use SoftDeletes;
     protected $dates = ['deleted_at'];
 
-    protected $table='acls';
+    protected $table='types';
 
     protected $fillable=[];
-
 }

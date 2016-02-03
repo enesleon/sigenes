@@ -18,6 +18,7 @@ class CreateStudentsTable extends Migration
             $table->dateTime('data_register');
             $table->integer('partner_id')->unsigned();
             $table->timestamps();
+            $table->softDeletes();
             $table->foreign('partner_id')->references('id')
                 ->on('partners')->onDelete('cascade')->onUpdate('cascade');
         });

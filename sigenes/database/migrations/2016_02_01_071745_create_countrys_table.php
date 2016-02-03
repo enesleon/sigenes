@@ -17,6 +17,7 @@ class CreateCountrysTable extends Migration
             $table->string('code', 3);
             $table->string('name', 25);
             $table->timestamps();
+            $table->softDeletes();
         });
        
     }
