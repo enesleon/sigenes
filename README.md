@@ -1,7 +1,5 @@
-Travis
-======
-[![Build Status](https://travis-ci.org/enesleon/sigenes.svg?branch=produccion)](https://travis-ci.org/enesleon/sigenes)
+[![Build Status](https://travis-ci.org/enesleon/sigenes.svg?branch=produccion)](https://travis-ci.org/enesleon/sigenes)[![Coverage Status](https://coveralls.io/repos/github/enesleon/sigenes/badge.svg?branch=produccion)](https://coveralls.io/github/enesleon/sigenes?branch=produccion)
 
-Coveralls
-=========
-[![Coverage Status](https://coveralls.io/repos/github/enesleon/sigenes/badge.svg?branch=produccion)](https://coveralls.io/github/enesleon/sigenes?branch=produccion)
+
+SIGENES
+=======
