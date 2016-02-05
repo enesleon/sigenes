@@ -7,11 +7,6 @@
             <nav class="bs-docs-sidebar" >
                 <ul class="nav nav-pills nav-stacked" >
                     @yield('vertical_nav')
-                    <li><a href="#">aaaa</a></li>
-                    <li><a href="#">aaaa</a></li>
-                    <li><a href="#">aaaa</a></li>
-                    <li><a href="#">aaaa</a></li>
-                    <li><a href="#">aaaa</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,11 +33,6 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     @yield('vertical_nav')
-                    <li><a href="#">aaaa</a></li>
-                    <li><a href="#">aaaa</a></li>
-                    <li><a href="#">aaaa</a></li>
-                    <li><a href="#">aaaa</a></li>
-                    <li><a href="#">aaaa</a></li>
                 </ul>
             </div>
         </div>
