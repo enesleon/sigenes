@@ -6,7 +6,7 @@
         <div widht="100%">
             <nav class="bs-docs-sidebar" >
                 <ul class="nav nav-pills nav-stacked" >
-                    @include('generals.menu.partials.student')
+                    @include('layouts.generals.menu.partials.student')
                 </ul>
             </nav>
         </div>
@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse-izq">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    @include('generals.menu.partials.student')
+                    @include('layouts.generals.menu.partials.student')
                 </ul>
             </div>
         </div>
