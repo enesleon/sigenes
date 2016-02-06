@@ -6,6 +6,10 @@
     @if (! Auth::guest())
         <div class="row">
             <div class="col-lg-2" style="padding-left: 0.0em; padding-right: 0.0em; height: 100%">
+                {{--
+                    Depending of type is the menu show (employee, student),
+                    this file content the validations for show menu items
+                --}}
                  @include('layouts.generals.menu.employee')
             </div>
             <div class="col-lg-10">
