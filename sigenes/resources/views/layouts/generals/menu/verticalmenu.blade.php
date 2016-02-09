@@ -4,7 +4,15 @@
             <div class="item">
                 <img src="{{ asset(env('LOGO_ENES')) }}" class="img-responsive">
             </div>
-            @include('layouts.generals.menu.partials.employee')
+            @if(Auth::user()->type == 'employee')
+                @include('layouts.generals.menu.partials.employee')
+            @endif
+            @if(Auth::user()->type == 'student')
+                @include('layouts.generals.menu.partials.student')
+            @endif
+            @if(Auth::user()->type == 'admin')
+                @include('layouts.generals.menu.partials.admin')
+            @endif
         </div>
     </div>
     <nav class="navbar navbar-default hidden-sm hidden-md hidden-lg">
