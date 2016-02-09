@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 @include('layouts.generals.headers')
+<script src="{{ asset('css/semantic/dist/semantic.min.js') }}"></script>
+
 <body>
     @if (! Auth::guest())
-        <div class="row">
-            <div class="col-lg-2" style="padding-left: 0.0em; padding-right: 0.0em; height: 100%">
-                {{--
-                    Depending of type is the menu show (employee, student),
-                    this file content the validations for show menu items
-                --}}
-                 @include('layouts.generals.menu.employee')
-            </div>
-            <div class="col-lg-10">
-                <div class="row">
-                    @include('layouts.generals.menu.general_menu')
-                </div>
-                <div class="row">
-                    <div class="container">
-                        @include('layouts.generals.errors')
-                        @include('layouts.generals.sessionMessage')
-                        @include('layouts.generals.content_template')
-                    </div>
-                </div>
 
+        <div class="col-lg-2 col-md-2 col-sm-2" style="padding-right: 0.0em; margin-right: 0.0em;">
+            <div class="row">
+                @include('layouts.generals.menu.verticalmenu')
+            </div>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-10" style="padding-left: 0.0em; margin-left: 0.0em;">
+            <div class="row">
+                @include('layouts.generals.menu.general_menu')
+            </div>
+            <div class="row">
+                <div class="container">
+                    @include('layouts.generals.errors')
+                    @include('layouts.generals.sessionMessage')
+                    @include('layouts.generals.content_template')
+                </div>
             </div>
         </div>
     @endif

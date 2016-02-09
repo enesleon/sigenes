@@ -3,6 +3,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Sigenes, sigenes, enes león, león enes, sigenes león, león unam, unam león"/>
     <meta name="author" content="ENES LEÓN" />
+    <link rel="shortcut icon" href="{{ asset(env('LOGO_ENES_120')) }}">
+    <link rel="apple-touch-icon" href="{{ asset(env('LOGO_ENES_120')) }}">
+    <link rel="image_src" type="image/jpeg" href="{{ asset(env('LOGO_ENES_120')) }}" />
+
     <title>@yield('page_title')</title>
 
     <!-- Fonts -->
@@ -11,16 +15,14 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+    <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/semantic/dist/semantic.min.css') }}" rel="stylesheet">
 
     @yield('extra_css')
     <style>
-        body {
-            font-family: 'Lato';
-        }
-
-        .fa-btn {
-            margin-right: 6px;
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
         }
     </style>
