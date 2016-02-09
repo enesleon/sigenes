@@ -22,6 +22,21 @@ class CreateStudentsTable extends Migration
             $table->foreign('partner_id')->references('id')
                 ->on('partners')->onDelete('cascade')->onUpdate('cascade');
         });
+        $now = date('Y-m-d H:i:s');
+        \DB::table('students')->insert([
+            [
+                'account_number' => 'STU12000789',
+                'data_register' => $now,
+                'partner_id' => 8,
+                'created_at' => $now,
+            ],
+            [
+                'account_number' => 'STU12000790',
+                'data_register' => $now,
+                'partner_id' => 9,
+                'created_at' => $now,
+            ],
+        ]);
     }
 
     /**
