@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default hidden-xs" style="margin-bottom: 0px;">
+<nav class="navbar navbar-default hidden-xs">
     <div class="col-lg-12">
         <div class="navbar-header">
             <!-- Collapsed Hamburger -->
