@@ -15,7 +15,7 @@
             @endif
         </div>
     </div>
-    <nav class="navbar navbar-inverse hidden-sm hidden-md hidden-lg">
+    <nav class="navbar navbar-default hidden-sm hidden-md hidden-lg">
         <div class="container">
             <div class="navbar-header">
 

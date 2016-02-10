@@ -6,4 +6,3 @@
 <script src="{{ asset('js/script/lib/ui-bootstrap-112.min.js') }}"></script>
 <script src="{{ asset('js/script/lib/angular-animate.min.js') }}"></script>
 <script src="{{ asset('js/script/app_auth.js') }}"></script>
-
