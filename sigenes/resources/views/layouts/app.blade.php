@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html data-ng-app="EnesAuth">
 <head>
     <!-- Standard Meta -->
     <meta charset="utf-8" />
@@ -135,20 +135,20 @@
                 <a class="ui button" href="{{ url('/login') }}">SIGENES</a>
             </div>
             <div class="item">
-                <a class="ui primary button">Sign Up</a>
+                <a class="ui primary button" href="{{ url('/register') }}">{{ trans('auth.signup') }}</a>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Sidebar Menu -->
-<div class="ui vertical inverted sidebar menu">
+<div class="ui vertical sidebar menu">
     <img src="{{ asset(env('LOGO_ENES')) }}" class="img-responsive" style="height: 60px; width: 140px">
     <a class="item">Item1</a>
     <a class="item">Item2</a>
     <a class="item">Item3</a>
     <a class="item" href="{{ url('/login') }}">SIGENES</a>
-    <a class="item">Signup</a>
+    <a class="item" href="{{ url('/register') }}">{{ trans('auth.signup') }}</a>
 </div>
 
 
@@ -161,14 +161,14 @@
                 <a class="toc item">
                     <i class="sidebar icon"></i>
                 </a>
-                <img src="{{ asset(env('LOGO_ENES')) }}" class="img-responsive hidden-xs" style="height: 60px; width: 140px">
+                <a href="{{ url('/') }}"><img src="{{ asset(env('LOGO_ENES')) }}" class="img-responsive hidden-xs" style="height: 60px; width: 140px"></a>
                 <a class="item">Item1</a>
                 <a class="item">Item2</a>
                 <a class="item">Item3</a>
                 <div class="right item">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a class="btn btn-warning" href="{{ url('/login') }}">SIGENES</a></div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a class="btn btn-warning" >Sign Up</a></div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a class="btn btn-warning" href="{{ url('/register') }}">{{ trans('auth.signup') }}</a></div>
                     </div>
                 </div>
             </div>
