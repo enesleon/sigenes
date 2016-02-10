@@ -7,12 +7,12 @@
 <body>
     @if (! Auth::guest())
 
-        <div class="col-lg-2 col-md-2 col-sm-2" style="padding-right: 0.0em; margin-right: 0.0em;">
-            <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2" style="padding-right: 0px; margin-right: 0px;">
+            <div class="row" style="padding-right: 0px; margin-right: 0px;">
                 @include('layouts.generals.menu.verticalmenu')
             </div>
         </div>
-        <div class="col-lg-10 col-md-10 col-sm-10" style="padding-left: 0.0em; margin-left: 0.0em;">
+        <div class="col-lg-10 col-md-10 col-sm-10" style="padding-left: 0px; margin-left: 0px;">
             <div class="row">
                 @include('layouts.generals.menu.general_menu')
             </div>

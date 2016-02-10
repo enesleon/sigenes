@@ -16,7 +16,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/semantic/dist/semantic.min.css') }}" rel="stylesheet">
 
     @yield('extra_css')
@@ -24,5 +23,8 @@
         html, body {
             max-width: 100%;
             overflow-x: hidden;
+            background-image: url("/resources/images/fondologo.png");
+            background-repeat: no-repeat;
+            background-position: center;
         }
     </style>
